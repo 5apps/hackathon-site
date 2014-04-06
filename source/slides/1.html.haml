@@ -1,0 +1,40 @@
+---
+layout: slide
+---
+:css
+  header h1 {
+    transform: rotate(-7deg);
+    -webkit-transform: rotate(-7deg);
+    -moz-transform: rotate(-7deg);
+    -o-transform: rotate(-7deg);
+    font-size: 84px;
+  }
+
+  header p.join {
+    font-size: 54px;
+    text-align: left;
+    font-weight: bold;
+    color: #444;
+    margin-left: 100px;
+  }
+
+  #info p {
+    color: #444;
+    font-size: 54px;
+    font-weight: bold;
+  }
+
+%header
+  %p.join
+    Join the
+  %h1
+    HTML5 App Hackathon
+  %p.sub
+    May 5-6, 2012 &middot; Berlin
+
+%section#info
+  %p
+    Find ALL THE INFO and register at
+  %p
+    %a{:href => "http://hackathon.5apps.com/"}http://hackathon.5apps.com/
+

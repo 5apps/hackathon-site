@@ -1,0 +1,18 @@
+!!!
+%html
+  %head
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}/
+    %meta{:content => "width=device-width, minimum-scale=1.0, maximum-scale=1.0", :name => "viewport"}/
+    %title
+      HTML5 App Hackathon
+    = stylesheet_link_tag "site.css"
+    %script{:type => "text/javascript", :src => "https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"}
+    %script{:type => "text/javascript", :src => "http://use.typekit.com/lus8rwh.js"}
+    %script{:type => "text/javascript"}
+      try{Typekit.load();}catch(e){}
+  %body
+    .wrapper
+      .container
+        = yield
+

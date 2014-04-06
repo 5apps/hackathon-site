@@ -1,0 +1,284 @@
+@import "compass"
+@import "susy"
+
+$link-color: #0092BF
+$html5_blue: #0092BF
+
+$font-color: #222
+$font-family: Helvetica, Arial, sans-serif
+$base-font-size:   15px
+$base-line-height: 1.4em
+
+$total-cols: 16
+$col-width: 3em
+$gutter-width: 1em
+$side-gutter-width: $gutter-width
+
++global-reset
+
+body
+  font-family: $font-family
+  font-size: $base-font-size
+  color: $font-color
+  background: url(https://5apps.com/assets/bg_body.png) left top repeat
+  font: 16px "proxima-nova", sans-serif
+
+a
+  color: $link-color
+  padding: 3px 6px
+  margin: -3px -6px
+  +single-transition(background-color, 0.3s)
+  &:hover
+    background: #efefef
+    +border-radius(5px)
+    +single-transition(background-color, 0.3s)
+
+em
+  font-weight: bold
+
+.wrapper
+  width: 100%
+  // background: #fff
+
+.container
+  +container
+  padding-bottom: 60px
+  // +susy-grid-background
+
+header
+  +full
+  text-align: center
+  padding: 100px 0 60px 0
+  h1
+    font-size: 60px
+    font-weight: 800
+    margin-bottom: 20px
+    color: $html5_blue
+  p.sub
+    font-size: 30px
+    font-weight: 800
+    color: #444
+
+section
+  margin-bottom: 100px
+  text-align: center
+  +columns(14)
+  +prefix(1)
+  +suffix(1)
+  +alpha
+  +omega
+  p
+    line-height: 1.5em
+    margin-bottom: 20px
+    &:last-child
+      margin-bottom: 0
+  header
+    padding-top: 0
+    padding-bottom: 0
+    margin: 0
+    .line-container
+      overflow: hidden
+      +background-image( linear-gradient(top, rgba(255,0,0,0), rgba(255,0,0,0) 49%, #ccc 50%, #ccc 52%, rgba(255,0,0,0) 52%, rgba(255,0,0,0)) )
+      margin-bottom: 30px
+      h2
+        text-align:center
+        background: transparent
+        font-size: 25px
+        font-weight: 800
+        color: #444
+      span
+        background: #fff
+        padding: 10px 15px
+        border: 1px solid #ccc
+
+section#intro
+  +columns(10)
+  +prefix(3)
+  +suffix(3)
+  +alpha
+  +omega
+  p
+    text-align: center
+    font-style: italic
+
+section#venue
+  #map_container
+    background: #fff
+    padding: 10px
+    border: 1px solid #efefef
+    margin: 0 0 20px 0
+  #map_canvas
+    width: 100%
+    height: 300px
+  span.u8
+    color: #fff
+    padding: 2px 3px
+    background: darkblue
+    font-size: 14px
+
+section#schedule
+  text-align: left
+  #day_one
+    width: 24%
+    float: left
+  #day_two
+    width: 24%
+    float: left
+    margin-left: 2%
+  #webweek
+    width: 48%
+    float: right
+  h3
+    font-weight: bold
+    margin-bottom: 10px
+  table
+    td, th
+      line-height: 1.5em
+    th
+      padding: 0 10px 0 0
+      color: #888
+    td
+      padding: 0 0 0 0
+
+section#faq
+  margin-bottom: 80px
+  text-align: left
+  .q_a
+    +column-count(2)
+    +column-gap(35px)
+    ul
+      display: inline
+    li
+      -webkit-column-break-inside: avoid
+      column-break-inside: avoid
+      padding-bottom: 20px
+      h3
+        font-weight: bold
+        margin-bottom: 8px
+      p
+        margin: 0
+        padding: 0
+
+section#sponsors
+  .sponsor
+    +clearfix
+    width: 48%
+    &.mozilla
+      float: left
+    &.blackberry
+      float: right
+    img
+      border: 1px solid #efefef
+      max-width: 98%
+
+section#connect
+  p
+    margin-bottom: 6px
+  #social-buttons
+    padding-top: 14px
+    margin-bottom: 15px
+    iframe
+      margin: 0 15px
+
+aside
+  +full
+  section
+    &.twitter
+      a
+        margin: 0
+        padding: 0
+        &:hover
+          text-decoration: none !important
+      .twtr-widget
+        font-family: $font-family !important
+        .twtr-tweet-text
+          p
+            line-height: $base-line-height !important
+          em
+            font-size: 10px !important
+        a.twtr-join-conv
+          color: #888 !important
+          font-size: 13px !important
+
+footer
+  padding: 0
+  p
+    +full
+    color: #888
+    font-size: 13px
+    text-align: center
+    a
+      color: #888
+  .divider
+    margin: 0 10px
+
+// MOBILE SCREENS
+
+@media screen and (max-width: 700px)
+
+  header
+    display: block
+    float: none
+    width: 90%
+    margin: 0 auto !important
+    padding: 60px 0 60px 0
+    h1
+      font-size: 50px
+      font-weight: 800
+      margin-bottom: 20px
+    p.sub
+      font-size: 30px
+
+  section#intro, section#venue, section#schedule,
+  section#faq, section#registration, section#connect,
+  section#sponsors
+    display: block
+    float: none
+    width: 90%
+    padding: 0
+    margin: 0 auto 60px auto
+    header
+      width: 100%
+      margin: 0 !important
+    p
+      text-align: left
+
+  section#schedule
+    #day_one
+      width: 100%
+      float: none
+      margin-bottom: 20px
+    #day_two
+      width: 100%
+      float: none
+      margin-left: 0
+      margin-bottom: 20px
+    #webweek
+      width: 100%
+      float: none
+
+  section#faq
+    margin-bottom: 40px
+    text-align: left
+    .q_a
+      +column-count(1)
+
+  .container
+    padding-bottom: 20px
+
+@media screen and (max-width: 540px)
+  section#sponsors
+    .sponsor
+      width: 100%
+      margin-bottom: 10px
+      &.mozilla
+        float: none
+      &.blackberry
+        float: none
+      img
+        width: 98%
+
+// TYPEKIT / WEBFONTS
+
+.wf-loading body
+  visibility: hidden

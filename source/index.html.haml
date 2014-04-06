@@ -1,0 +1,161 @@
+%section#intro
+  %p
+    Join the 5apps crew and lots of fellow Web geeks for 2 days of hacking
+    client-side JavaScript apps, powered by HTML5 and friends. Build awesome
+    things together, and check out the latest Web platform features in action.
+    All in a relaxed, hacker-friendly atmosphere, that will make you want to
+    stay after the weekend.
+
+%section#venue
+  = section_header "Venue"
+  %p
+    The event will take place at the 5apps Rebel Base, above Betahaus in Berlin
+    Kreuzberg:
+  #map_container
+    #map_canvas
+  :markdown
+    Get there with the <span class="u8">U8</span> to
+    [Moritzplatz](http://maps.google.com/maps/place?q=moritzplatz+berlin&hl=en&cid=11856344434577590523)
+    (5 minutes from Alexanderplatz, 1 from Kottbusser Tor)
+
+%section#schedule
+  = section_header "Schedule"
+  #day_one
+    %h3
+      Saturday, May 5th
+    %table
+      %tr
+        %th 9:00
+        %td Doors open
+      %tr
+        %th 10:00
+        %td Welcome session
+      %tr
+        %th 10:30
+        %td Hacking begins!
+      %tr
+        %th 14:00
+        %td Lunch
+      %tr
+        %th 19:00
+        %td Snacks &amp; drinks
+  #day_two
+    %h3
+      Sunday, May 6th
+    %table
+      %tr
+        %th 10:00
+        %td Doors open
+      %tr
+        %th 13:00
+        %td Lunch
+      %tr
+        %th 18:00
+        %td Hacking ends
+      %tr
+        %th 18:15
+        %td Demo hour
+  #webweek
+    %h3
+      Berlin Web Week
+    :markdown
+      The Hackathon is scheduled right in the middle of the [Berlin Web
+      Week](http://berlinwebweek.de), a week-long festival consisting of many
+      conferences and smaller events, bringing thousands of digerati to Berlin.
+      Check out their [calendar](http://berlinwebweek.de/berlin-web-week-2012/)
+      for things to do before and after the weekend.
+
+%section#faq
+  = section_header "FAQ"
+  .q_a
+    %ul
+      %li
+        %h3
+          Who is invited?
+        %p
+          Web developers of all kinds, Web designers, UI designers, and generally
+          everybody who wants to build cool stuff based on Web platform
+          technologies.
+      %li
+        %h3
+          What are the rules?
+        %p
+          There are no rules! You can hack on whatever you’d like at the event.
+          You bring an idea or decide what to work on when you arrive. You can
+          come with a team or we will set you up with one at the event. It’s
+          entirely up to you.
+      %li
+        %h3
+          What age do I have to be to participate in the Hackathon?
+        %p
+          There are no age restrictions for the Hackathon.
+      %li
+        %h3
+          What do I need to bring to the Hackathon?
+        %p
+          Just bring your laptop with whatever software you plan to use.
+          Everything else will be provided. We'll also have some gamepads, lots
+          of mobile devices and other testing hardware around.
+      %li
+        %h3
+          Will food and drinks be provided?
+        %p
+          We'll have warm lunch on both days and plenty of snacks throughout the
+          day. Plus coffee, tea, and cold drinks at all times, of course. We'll
+          have vegetarian options for all meals as well. If you have special dietary
+          requirements, please let us know before the event and we'll try to accomodate
+          them.
+      %li
+        %h3
+          I have another question. How can I contact you?
+        :markdown
+          Ask us anything on [Twitter](https://twitter.com/5apps_) or via good
+          old [email](mailto:hackathon@5apps.com).
+
+%section#registration
+  -# = section_header "Register now!"
+  = section_header "Registration"
+  :markdown
+    All seats are taken, we're afraid. We may add some more though. Please be patient.
+  <div style="width:100%; text-align:left;" ><iframe src="http://www.eventbrite.co.uk/tickets-external?eid=3334661061&ref=etckt" frameborder="0" height="160" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true"></iframe></div>
+
+%section#sponsors
+  = section_header "Sponsors"
+  :markdown
+    Many thanks to our fantastic partners, without whom we couldn't bring you
+    this event!
+  .sponsor.mozilla
+    %p
+      %a{:href => "http://mozilla.com"}
+        = image_tag 'mozilla.png', :alt => "Mozilla"
+  .sponsor.blackberry
+    %p
+      %a{:href => "http://blackberry.com"}
+        = image_tag 'blackberry.png', :alt => "BlackBerry"
+
+%section#connect
+  = section_header "Connect &amp; share"
+
+  :markdown
+    See who else is coming and add yourself as attendee [on
+    Lanyrd](http://lanyrd.com/2012/html5-web-app-hackathon/).
+
+    [Follow us on Twitter](https://twitter.com/5apps_) to get the latest news
+    about the event.
+
+  #social-buttons
+    %a.twitter-share-button{"data-count" => "none", "data-hashtags" => "5hacks", "data-text" => "Join the HTML5 App Hackathon:", "data-url" => "http://hackathon.5apps.com", :href => "https://twitter.com/share"} Tweet
+    .g-plusone{"data-annotation" => "none", "data-size" => "medium", :style => "display: inline;"}
+    %iframe{:allowTransparency => "true", :frameborder => "0", :scrolling => "no", :src => "//www.facebook.com/plugins/like.php?href=http%3A%2F%2F5hacks.com&send=false&layout=button_count&width=100&show_faces=false&action=recommend&colorscheme=light&font=lucida+grande&height=21&appId=147363645391172", :style => "border:none; overflow:hidden; width:120px; height:21px;"}
+
+    %span{:itemprop => "name", :style => "display: none;"} HTML5 App Hackathon
+    %span{:itemprop => "description", :style => "display: none;"} Join the 5apps crew and lots of fellow Web geeks for 2 days of hacking client-side JavaScript apps, powered by HTML5 and friends. Build awesome things together, and check out the latest Web platform features in action. All in a relaxed, hacker-friendly atmosphere, that will make you want to stay after the weekend.
+
+    :javascript
+      !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+
+      (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+      })();
